@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "name": "myname",
-      "age": 20,
-      "id": 1
+      "id": 1,
+      "name": "Dewansh2",
+      "age": 28
     },
     {
       "name": "myname",
@@ -22,6 +22,11 @@
       "name": "Dewa",
       "age": 27,
       "id": 5
+    },
+    {
+      "name": "Dewansh3",
+      "age": 28,
+      "id": 6
     }
   ]
 }

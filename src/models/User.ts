@@ -1,6 +1,8 @@
+import { Model } from "./Model";
+
+import { ApiSync } from "./ApiSync";
 import { Attributes } from "./Attributes";
 import { Eventing } from "./Eventing";
-import { Sync } from "./Sync";
 
 export interface UserProps {
   id?: number; // if user has id then it has a server saved representation
@@ -10,12 +12,13 @@ export interface UserProps {
 
 const ROOT_URL = "http://localhost:3000/users";
 
-export class User {
-  events: Eventing = new Eventing();
-  sync: Sync<UserProps> = new Sync<UserProps>(ROOT_URL);
-  attributes: Attributes<UserProps>;
-
-  constructor(attrs: UserProps) {
-    this.attributes = new Attributes(attrs);
+export class User extends Model<UserProps> {
+  //static method
+  static buildUser(attrs: UserProps): User {
+    return new User(
+      new Attributes<UserProps>(attrs),
+      new Eventing(),
+      new ApiSync<UserProps>(ROOT_URL)
+    );
   }
 }
