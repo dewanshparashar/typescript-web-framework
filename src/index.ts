@@ -1,7 +1,8 @@
-import { User } from "./models/User";
+import { User, UserProps } from "./models/User";
+import { Collection } from "./models/Collection";
 
-const user = User.buildUser({});
+const collection = User.buildUserCollection();
 
-user.on("change", () => console.log("User has been updated!"));
+collection.on("change", () => console.log(collection));
 
-Object.assign(window, { user: user });
+Object.assign(window, { collection: collection });
