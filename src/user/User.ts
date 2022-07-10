@@ -1,9 +1,9 @@
-import { Model } from "./Model";
+import { Model } from "../core/models/Model";
 
-import { ApiSync } from "./ApiSync";
-import { Attributes } from "./Attributes";
-import { Eventing } from "./Eventing";
-import { Collection } from "./Collection";
+import { ApiSync } from "../core/models/ApiSync";
+import { Attributes } from "../core/models/Attributes";
+import { Eventing } from "../core/models/Eventing";
+import { Collection } from "../core/models/Collection";
 
 export interface UserProps {
   id?: number; // if user has id then it has a server saved representation

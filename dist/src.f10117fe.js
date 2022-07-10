@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/models/Model.ts":[function(require,module,exports) {
+})({"src/core/models/Model.ts":[function(require,module,exports) {
 "use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4612,7 +4612,7 @@ module.exports.default = axios;
 
 },{"./utils":"node_modules/axios/lib/utils.js","./helpers/bind":"node_modules/axios/lib/helpers/bind.js","./core/Axios":"node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"node_modules/axios/lib/core/mergeConfig.js","./defaults":"node_modules/axios/lib/defaults/index.js","./cancel/CanceledError":"node_modules/axios/lib/cancel/CanceledError.js","./cancel/CancelToken":"node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"node_modules/axios/lib/cancel/isCancel.js","./env/data":"node_modules/axios/lib/env/data.js","./helpers/toFormData":"node_modules/axios/lib/helpers/toFormData.js","../lib/core/AxiosError":"node_modules/axios/lib/core/AxiosError.js","./helpers/spread":"node_modules/axios/lib/helpers/spread.js","./helpers/isAxiosError":"node_modules/axios/lib/helpers/isAxiosError.js"}],"node_modules/axios/index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"src/models/ApiSync.ts":[function(require,module,exports) {
+},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"src/core/models/ApiSync.ts":[function(require,module,exports) {
 "use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4665,7 +4665,7 @@ var ApiSync = /*#__PURE__*/function () {
 }();
 
 exports.ApiSync = ApiSync;
-},{"axios":"node_modules/axios/index.js"}],"src/models/Attributes.ts":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js"}],"src/core/models/Attributes.ts":[function(require,module,exports) {
 "use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4707,7 +4707,7 @@ var Attributes = /*#__PURE__*/function () {
 }();
 
 exports.Attributes = Attributes;
-},{}],"src/models/Eventing.ts":[function(require,module,exports) {
+},{}],"src/core/models/Eventing.ts":[function(require,module,exports) {
 "use strict";
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4744,7 +4744,7 @@ var Eventing = /*#__PURE__*/_createClass(function Eventing() {
 });
 
 exports.Eventing = Eventing;
-},{}],"src/models/Collection.ts":[function(require,module,exports) {
+},{}],"src/core/models/Collection.ts":[function(require,module,exports) {
 "use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4807,7 +4807,7 @@ var Collection = /*#__PURE__*/function () {
 }();
 
 exports.Collection = Collection;
-},{"axios":"node_modules/axios/index.js","./Eventing":"src/models/Eventing.ts"}],"src/models/User.ts":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","./Eventing":"src/core/models/Eventing.ts"}],"src/user/User.ts":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -4837,15 +4837,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.User = void 0;
 
-var Model_1 = require("./Model");
+var Model_1 = require("../core/models/Model");
 
-var ApiSync_1 = require("./ApiSync");
+var ApiSync_1 = require("../core/models/ApiSync");
 
-var Attributes_1 = require("./Attributes");
+var Attributes_1 = require("../core/models/Attributes");
 
-var Eventing_1 = require("./Eventing");
+var Eventing_1 = require("../core/models/Eventing");
 
-var Collection_1 = require("./Collection");
+var Collection_1 = require("../core/models/Collection");
 
 var ROOT_URL = "http://localhost:3000/users";
 
@@ -4889,7 +4889,7 @@ var User = /*#__PURE__*/function (_Model_1$Model) {
 }(Model_1.Model);
 
 exports.User = User;
-},{"./Model":"src/models/Model.ts","./ApiSync":"src/models/ApiSync.ts","./Attributes":"src/models/Attributes.ts","./Eventing":"src/models/Eventing.ts","./Collection":"src/models/Collection.ts"}],"src/views/CollectionView.ts":[function(require,module,exports) {
+},{"../core/models/Model":"src/core/models/Model.ts","../core/models/ApiSync":"src/core/models/ApiSync.ts","../core/models/Attributes":"src/core/models/Attributes.ts","../core/models/Eventing":"src/core/models/Eventing.ts","../core/models/Collection":"src/core/models/Collection.ts"}],"src/core/views/CollectionView.ts":[function(require,module,exports) {
 "use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4942,7 +4942,7 @@ var CollectionView = /*#__PURE__*/function () {
 }();
 
 exports.CollectionView = CollectionView;
-},{}],"src/views/UserList.ts":[function(require,module,exports) {
+},{}],"src/user/UserList.ts":[function(require,module,exports) {
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -4972,7 +4972,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.UserList = void 0;
 
-var CollectionView_1 = require("./CollectionView");
+var CollectionView_1 = require("../core/views/CollectionView");
 
 var UserList = /*#__PURE__*/function (_CollectionView_1$Col) {
   _inherits(UserList, _CollectionView_1$Col);
@@ -4996,16 +4996,16 @@ var UserList = /*#__PURE__*/function (_CollectionView_1$Col) {
 }(CollectionView_1.CollectionView);
 
 exports.UserList = UserList;
-},{"./CollectionView":"src/views/CollectionView.ts"}],"src/index.ts":[function(require,module,exports) {
+},{"../core/views/CollectionView":"src/core/views/CollectionView.ts"}],"src/index.ts":[function(require,module,exports) {
 "use strict"; // import { User, UserProps } from "./models/User";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var User_1 = require("./models/User");
+var User_1 = require("./user/User");
 
-var UserList_1 = require("./views/UserList"); // Object.assign(window, { collection: collection });
+var UserList_1 = require("./user/UserList"); // Object.assign(window, { collection: collection });
 // 1. each view must produce HTML
 // 2. we should be able to nest one view HTML in another
 // 3. We need to have a good way to handle user events
@@ -5016,9 +5016,6 @@ var UserList_1 = require("./views/UserList"); // Object.assign(window, { collect
 var rootElement = document.getElementById("root");
 
 if (rootElement) {
-  // const user = User.buildUser({ name: "Dewans", age: 20 });
-  // const userEdit = new UserEdit(rootElement, user);
-  // userEdit.render();
   var userCollection = User_1.User.buildUserCollection();
   var userList = new UserList_1.UserList(rootElement, userCollection);
   userList.render();
@@ -5026,7 +5023,7 @@ if (rootElement) {
 } else {
   throw new Error("Root element not found!");
 }
-},{"./models/User":"src/models/User.ts","./views/UserList":"src/views/UserList.ts"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./user/User":"src/user/User.ts","./user/UserList":"src/user/UserList.ts"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

@@ -1,5 +1,5 @@
-import { User, UserProps } from "../models/User";
-import { View } from "./View";
+import { User, UserProps } from "./User";
+import { View } from "../core/views/View";
 
 export class UserForm extends View<User, UserProps> {
   onUpdateNameClick = (): void => {

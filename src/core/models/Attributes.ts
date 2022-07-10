@@ -1,4 +1,4 @@
-import { UserProps } from "./User";
+import { UserProps } from "../../user/User";
 
 export class Attributes<T> {
   constructor(private data: T) {}

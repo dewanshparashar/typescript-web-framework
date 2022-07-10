@@ -1,8 +1,8 @@
 // import { User, UserProps } from "./models/User";
 
-import { User } from "./models/User";
-import { UserEdit } from "./views/UserEdit";
-import { UserList } from "./views/UserList";
+import { User } from "./user/User";
+import { UserEdit } from "./user/UserEdit";
+import { UserList } from "./user/UserList";
 // Object.assign(window, { collection: collection });
 
 // 1. each view must produce HTML
@@ -13,10 +13,6 @@ import { UserList } from "./views/UserList";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
-  // const user = User.buildUser({ name: "Dewans", age: 20 });
-  // const userEdit = new UserEdit(rootElement, user);
-  // userEdit.render();
-
   const userCollection = User.buildUserCollection();
 
   const userList = new UserList(rootElement, userCollection);
