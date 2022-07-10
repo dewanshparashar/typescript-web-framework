@@ -1,8 +1,8 @@
 // import { User, UserProps } from "./models/User";
 
 import { User } from "./models/User";
-import { UserForm } from "./views/UserForm";
-import { UserShow } from "./views/UserShow";
+import { UserEdit } from "./views/UserEdit";
+import { UserList } from "./views/UserList";
 // Object.assign(window, { collection: collection });
 
 // 1. each view must produce HTML
@@ -13,9 +13,16 @@ import { UserShow } from "./views/UserShow";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
-  const user = User.buildUser({ name: "Dewans", age: 20 });
-  const userForm = new UserForm(rootElement, user);
-  userForm.render();
+  // const user = User.buildUser({ name: "Dewans", age: 20 });
+  // const userEdit = new UserEdit(rootElement, user);
+  // userEdit.render();
+
+  const userCollection = User.buildUserCollection();
+
+  const userList = new UserList(rootElement, userCollection);
+  userList.render();
+
+  console.log(userList);
 } else {
   throw new Error("Root element not found!");
 }
