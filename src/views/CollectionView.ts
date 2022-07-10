@@ -1,6 +1,7 @@
 import { Collection } from "../models/Collection";
+import { Model } from "../models/Model";
 
-export abstract class CollectionView<T, K> {
+export abstract class CollectionView<T extends Model<K>, K> {
   // provide a model and item parent for collection, render it
 
   abstract renderItem(model: T): string;
